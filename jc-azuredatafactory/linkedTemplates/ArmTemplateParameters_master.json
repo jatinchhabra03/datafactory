@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "jc-azuredatafactory"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
+			"value": "jc_adf_secret"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://jcallstorageaccount.dfs.core.windows.net"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://jc-key-vault.vault.azure.net/"
+		},
+		"trigger2_properties_typeProperties_scope": {
+			"value": "/subscriptions/8a8600a6-8b50-44d9-b053-b28d939e9fb1/resourceGroups/jc_resource_group/providers/Microsoft.Storage/storageAccounts/jcallstorageaccount"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

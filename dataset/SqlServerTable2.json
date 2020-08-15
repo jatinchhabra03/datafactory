@@ -7,7 +7,27 @@
 		},
 		"annotations": [],
 		"type": "SqlServerTable",
-		"schema": [],
+		"schema": [
+			{
+				"name": "ActorID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ActorName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ActorDOB",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ActorGender",
+				"type": "nvarchar"
+			}
+		],
 		"typeProperties": {
 			"schema": "dbo",
 			"table": "tblActor_pasted"

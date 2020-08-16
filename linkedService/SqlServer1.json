@@ -5,9 +5,16 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=True;data source=JATIN\\SQLEXPRESS;initial catalog=Movies",
+			"connectionString": "Integrated Security=True;Data Source=JATIN\\SQLEXPRESS;Initial Catalog=Movies",
 			"userName": "jatinchhabra",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxODgyYjA5OS0zM2Y2LTQyNDAtYjE0OS00OWI1Zjg5OTI5YjIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault4",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "jadf"
+			}
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime1",

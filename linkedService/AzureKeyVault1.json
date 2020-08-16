@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "AzureKeyVault",
 		"typeProperties": {
-			"baseUrl": "https://jc-key-vault.vault.azure.net/"
+			"baseUrl": "https://jckeyvault2.vault.azure.net/"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/linkedservices"

@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "AzureKeyVault",
 		"typeProperties": {
-			"baseUrl": "https://jc-key-vault.vault.azure.net/secrets/jcsql/a78ae06590ee492a95fb4da7074a6ad0"
+			"baseUrl": "https://jc-key-vault.vault.azure.net/secrets/"
 		}
 	}
 }

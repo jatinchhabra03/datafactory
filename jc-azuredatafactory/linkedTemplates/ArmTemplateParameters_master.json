@@ -8,14 +8,35 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
 		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
-			"value": "jc_adf_secret"
+			"value": "jblob"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://jcallstorageaccount.dfs.core.windows.net"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://jckeyvault2.vault.azure.net/"
+		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
 			"value": "https://jc-key-vault.vault.azure.net/"
+		},
+		"AzureKeyVault3_properties_typeProperties_baseUrl": {
+			"value": "https://jc-key-vault.vault.azure.net/"
+		},
+		"AzureKeyVault4_properties_typeProperties_baseUrl": {
+			"value": "https://jckeyvault2.vault.azure.net/"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "jatinchhabra"
 		},
 		"trigger2_properties_typeProperties_scope": {
 			"value": "/subscriptions/8a8600a6-8b50-44d9-b053-b28d939e9fb1/resourceGroups/jc_resource_group/providers/Microsoft.Storage/storageAccounts/jcallstorageaccount"

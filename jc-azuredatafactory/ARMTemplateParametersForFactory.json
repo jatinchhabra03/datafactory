@@ -14,8 +14,8 @@
 		"SqlServer1_connectionString": {
 			"value": ""
 		},
-		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
-			"value": "jblob"
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+			"value": "https://jcallstorageaccount.blob.core.windows.net"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://jcallstorageaccount.dfs.core.windows.net"

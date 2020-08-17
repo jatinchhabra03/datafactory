@@ -19,9 +19,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
-		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
-			"defaultValue": "jblob"
+			"defaultValue": "https://jcallstorageaccount.blob.core.windows.net"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
@@ -87,6 +87,9 @@
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
 					},
+					"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
+					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
 					},
@@ -101,9 +104,6 @@
 					},
 					"AzureKeyVault4_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault4_properties_typeProperties_baseUrl')]"
-					},
-					"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
-						"value": "[parameters('AzureBlobStorage1_properties_typeProperties_connectionString_secretName')]"
 					},
 					"SqlServer1_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"

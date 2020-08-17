@@ -19,9 +19,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
-		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
-			"defaultValue": "jblob"
+			"defaultValue": "https://jcallstorageaccount.blob.core.windows.net"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
@@ -415,19 +415,11 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"connectionString": {
-						"type": "AzureKeyVaultSecret",
-						"store": {
-							"referenceName": "AzureKeyVault1",
-							"type": "LinkedServiceReference"
-						},
-						"secretName": "[parameters('AzureBlobStorage1_properties_typeProperties_connectionString_secretName')]"
-					}
+					"serviceEndpoint": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]",
+					"accountKind": "StorageV2"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureKeyVault1')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStorage1')]",

@@ -7,10 +7,6 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "jc-azuredatafactory"
 		},
-		"AzureBlobStorage1_servicePrincipalKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'servicePrincipalKey' of 'AzureBlobStorage1'"
-		},
 		"AzureDataLakeStorage1_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
@@ -23,17 +19,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
-		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
 			"type": "string",
-			"defaultValue": "https://jcallstorageaccount.blob.core.windows.net"
-		},
-		"AzureBlobStorage1_properties_typeProperties_tenant": {
-			"type": "string",
-			"defaultValue": "73034ef1-94c6-4b69-bb6e-377c01676722"
-		},
-		"AzureBlobStorage1_properties_typeProperties_servicePrincipalId": {
-			"type": "string",
-			"defaultValue": "0d296489-3fc5-432c-876e-1d0af1122b56"
+			"defaultValue": "jblob"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
@@ -427,17 +415,19 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"serviceEndpoint": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]",
-					"tenant": "[parameters('AzureBlobStorage1_properties_typeProperties_tenant')]",
-					"servicePrincipalId": "[parameters('AzureBlobStorage1_properties_typeProperties_servicePrincipalId')]",
-					"servicePrincipalKey": {
-						"type": "SecureString",
-						"value": "[parameters('AzureBlobStorage1_servicePrincipalKey')]"
-					},
-					"accountKind": "StorageV2"
+					"connectionString": {
+						"type": "AzureKeyVaultSecret",
+						"store": {
+							"referenceName": "AzureKeyVault1",
+							"type": "LinkedServiceReference"
+						},
+						"secretName": "[parameters('AzureBlobStorage1_properties_typeProperties_connectionString_secretName')]"
+					}
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureKeyVault1')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStorage1')]",

@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "jc-azuredatafactory"
 		},
+		"AzureBlobStorage1_servicePrincipalKey": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
@@ -14,11 +17,14 @@
 		"SqlServer1_connectionString": {
 			"value": ""
 		},
-		"SqlServer1_password": {
-			"value": ""
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+			"value": "https://jcallstorageaccount.blob.core.windows.net"
 		},
-		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
-			"value": "jblob"
+		"AzureBlobStorage1_properties_typeProperties_tenant": {
+			"value": "73034ef1-94c6-4b69-bb6e-377c01676722"
+		},
+		"AzureBlobStorage1_properties_typeProperties_servicePrincipalId": {
+			"value": "0d296489-3fc5-432c-876e-1d0af1122b56"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://jcallstorageaccount.dfs.core.windows.net"

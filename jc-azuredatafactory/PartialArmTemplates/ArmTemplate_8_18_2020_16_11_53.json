@@ -1,0 +1,29 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "jc-azuredatafactory"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"sasUri": "https://jcallstorageaccount.blob.core.windows.net/folder1/blob1.txt?sv=2019-12-12&ss=b&srt=sco&sp=rwdlacx&se=2020-08-18T18:13:46Z&st=2020-08-18T10:13:46Z&spr=https,http&sig=jYwv4UCnoEqz7LGYQeUUU19ROpl%2F0qWVUvNGvpkJBSY%3D"
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

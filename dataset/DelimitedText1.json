@@ -9,7 +9,9 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "blob1.txt",
+				"container": "folder1"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

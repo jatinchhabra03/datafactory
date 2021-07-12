@@ -7,6 +7,9 @@
 		},
 		"AZ_SQL_DATABASE_LS_connectionString": {
 			"value": ""
+		},
+		"AzureBlobStorage1_uat_connectionString": {
+			"value": ""
 		}
 	}
 }
